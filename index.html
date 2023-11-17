@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Escano | LG 7.2 Navigate</title>
+  
+		<style>
+			a {
+			display: block;
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid #ccc;
+			text-decoration: none;
+			}
+	
+			a:link {
+			background-color: #fff;
+			color: #000;
+			}
+	
+			a:visited {
+			background-color: #89ABE3FF;
+			color: #FCF6F5FF;
+			}
+
+			a:hover {
+			background-color: #755139FF;
+			color: #F2EDD7FF;
+			}
+
+			a:active {
+			background-color: #ddd;
+			color: #000;
+			}
+
+			#div1 {
+			border: 1px solid #030303;
+			width: 300px;
+			height: 150px;
+			margin: 10px;
+			padding: 10px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			}
+
+			#div2 {
+			border: 1px solid #030303;
+			width: 300px;
+			height: 150px;
+			margin: 10px;
+			padding: 10px;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			}
+
+			#div1.active {
+			background-color: #603F83FF;
+			color: #C7D3D4FF;
+			}
+
+			#div2.active {
+			border: 10px dotted green;
+			background-color: #E7EBE0FF;
+			color: #28334AFF;
+			}
+		</style>
+  
+	</head>
+
+		<body>
+			<a href="#div1">First Link</a>
+			<a href="#div2">Second Link</a><br>
+
+			<div id="div1">THIS IS DIV 1</div>
+			<div id="div2">THIS IS DIV 2</div>
+  
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+				var link1 = document.querySelector('a[href="#div1"]');
+				var link2 = document.querySelector('a[href="#div2"]');
+				var div1 = document.getElementById('div1');
+				var div2 = document.getElementById('div2');
+
+				link1.addEventListener('click', function () {
+				div1.classList.toggle('active');
+				div2.classList.remove('active');
+				});
+
+				link2.addEventListener('click', function () {
+				div2.classList.toggle('active');
+				div1.classList.remove('active');
+				});
+				});
+			</script>
+		
+		</body>
+</html>
